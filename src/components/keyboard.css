@@ -1,0 +1,25 @@
+#piano {
+    display: flex;
+    justify-content: center;
+}
+
+.key {
+    cursor: pointer;
+    height: 120px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.white {
+    background-color: white;
+    width: 40px;
+}
+
+.black {
+    background-color: black;
+    width: 30px;
+    margin-left: -15px;
+    margin-right: -15px;
+    z-index: 1;
+    height: 80px;
+}
