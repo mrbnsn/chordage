@@ -1,18 +1,37 @@
 #piano {
     display: flex;
     justify-content: center;
+    background-color: black;
+    padding: 30px 20px 15px;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .key {
+    position: relative;
     cursor: pointer;
     height: 120px;
     border: 1px solid black;
     box-sizing: border-box;
+    transition: background-color 500ms ease;
+    border-radius: 0 0 5px 5px;
+}
+
+.key::after {
+    content: attr(id);
+    color: red;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .white {
     background-color: white;
     width: 40px;
+}
+
+.white::after {
+    color: black;
 }
 
 .black {
@@ -22,4 +41,12 @@
     margin-right: -15px;
     z-index: 1;
     height: 80px;
+}
+
+.black::after {
+    color: white;
+}
+
+.key:hover {
+    background-color: #4caf50;
 }

@@ -1,20 +1,28 @@
 import './keyboard.css';
-import React from 'react';
+import React, { useState } from 'react';
+import { Box } from '@mui/material';
+import ScaleDisplay from './scale-display/scale-display';
 
 const PianoKey = ({ note, type, onClick }) => {
     const classes = `key ${type}`;
+
     return (
-        <div className={classes} id={note} onClick={() => onClick(note)}></div>
+        <Box className={classes} id={note} onClick={() => onClick(note)}></Box>
     );
 };
 
 const Keyboard = () => {
+    const [note, setNote] = useState('C');
+
     const keyClicked = (note) => {
         console.log("Key clicked:", note);
+        setNote(note);
     };
 
     return (
-        <div id="piano">
+        <Box>
+            <ScaleDisplay root={note} type={'Aeolian'}  />
+        <Box id="piano">
             <PianoKey note="C" type="white" onClick={keyClicked} />
             <PianoKey note="C#" type="black" onClick={keyClicked} />
             <PianoKey note="D" type="white" onClick={keyClicked} />
@@ -27,8 +35,8 @@ const Keyboard = () => {
             <PianoKey note="A" type="white" onClick={keyClicked} />
             <PianoKey note="A#" type="black" onClick={keyClicked} />
             <PianoKey note="B" type="white" onClick={keyClicked} />
-            <PianoKey note="C" type="white" onClick={keyClicked} />
-        </div>
+        </Box>
+        </Box>
     );
 };
 
