@@ -50,3 +50,7 @@
 .key:hover {
     background-color: #4caf50;
 }
+
+.key.selected {
+    background-color: #4caf50;
+}
