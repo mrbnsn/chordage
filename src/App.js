@@ -1,4 +1,4 @@
-import './app.css';
+import './App.css';
 import React, { useState } from 'react';
 import { Box } from '@mui/material';
 import Keyboard from './components/keyboard';
