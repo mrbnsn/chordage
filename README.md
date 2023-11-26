@@ -1,7 +1,7 @@
 # chordage
 A web app to display all chords in each mode for a given note, as well as their secondary dominants, to aid in more creative chord progressions
 
-# Quickstart
+# Quickstart for Development
 In terminal:
 `$ cd ~/apps/react-apps/chordage && docker-compose up --build -d && docker-compose exec -it web bash`
 
