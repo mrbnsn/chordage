@@ -1,6 +1,5 @@
 # Stage 1: Build the React application
-#FROM node:16 AS build
-FROM node:16
+FROM node:16 AS build
 WORKDIR /app
 COPY package.json /app/
 COPY package-lock.json /app/
